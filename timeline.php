@@ -51,7 +51,7 @@ if ($result->num_rows > 0) {
     // output data of each row
     echo "<table cellspacing=10px cellpadding=10px><tr><th>ID</th><th>LATITUDE</th><th>LONGITUDE</th></tr>";  
     while ($row = $result->fetch_assoc()) {        
-        echo "<div class=\"container right\" data-aos=\"flip-up\"><div class=\"content\"><h2>Time:</h2><p><a id=\"bleh\" href=\"\" onclick=\"f1()\">Check your Location</a></p></div></div>";
+        echo "<div class=\"container right\" data-aos=\"flip-up\"><div class=\"content\"><h2>Time:".$row["id"]."</h2><p><a id=\"bleh\" href=\"https://maps.google.com/?q=<".$row["lat"].">,<".$row["lon"].">\" onclick=\"\">Check your Location</a></p></div></div>";
     }
     echo "</table>";
 } else {
